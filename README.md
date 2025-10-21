@@ -1,8 +1,8 @@
- # TRẦN THỊ THU HÀ - K225480106009 
- # BÀI TẬP 2: LẬP TRÌNH WEB.
- # NGÀY GIAO: 19/10/2025
- # DEADLINE: 26/10/2025
- # YÊU CẦU:
+# TRẦN THỊ THU HÀ - K225480106009
+# Bài tập 02: Lập trình web.
+# NGÀY GIAO: 19/10/2025
+# DEADLINE: 26/10/2025
+# YÊU CẦU: 
 ## 2. NỘI DUNG BÀI TẬP:
 ### 2.1. Cài đặt Apache web server:
 - Vô hiệu hoá IIS: nếu iis đang chạy thì mở cmd quyền admin để chạy lệnh: iisreset /stop
@@ -24,11 +24,13 @@
     giải nén được file nssm.exe
     copy nssm.exe vào thư mục `D:\nodejs\nodered\`
   + tạo file "D:\nodejs\nodered\run-nodered.cmd" với nội dung (5 dòng sau):
+```
 @echo off
 REM fix path
 set PATH=D:\nodejs;%PATH%
 REM Run Node-RED
-node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
+node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %* 
+```
   + mở cmd, chuyển đến thư mục: `D:\nodejs\nodered`
   + cài đặt service `a1-nodered` bằng lệnh: nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"
   + chạy service `a1-nodered` bằng lệnh: `nssm start a1-nodered`
@@ -38,14 +40,16 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 - cài đặt các thư viện: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-telegrambot, node-red-contrib-moment, node-red-contrib-influxdb, node-red-contrib-duckdns, node-red-contrib-cron-plus
 - Sửa file `D:\nodejs\nodered\work\settings.js` : 
   tìm đến chỗ adminAuth, bỏ comment # ở đầu dòng (8 dòng), thay chuỗi mã hoá mật khẩu bằng chuỗi mới
-  adminAuth: {
+```
+    adminAuth: {
         type: "credentials",
         users: [{
             username: "admin",
             password: "chuỗi_mã_hoá_mật_khẩu",
             permissions: "*"
         }]
-    },  
+    },
+```
    với mã hoá mật khẩu có thể thiết lập bằng tool: https://tms.tnut.edu.vn/pw.php
 - chạy lại nodered bằng cách: mở cmd, vào thư mục `D:\nodejs\nodered` và chạy lệnh `nssm restart a1-nodered`
   khi đó nodered sẽ yêu cầu nhập mật khẩu mới vào được giao diện cho admin tại: http://localhost:1880
@@ -53,10 +57,10 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 - tại flow1 trên nodered, sử dụng node `http in` và `http response` để tạo api
 - thêm node `MSSQL` để truy vấn tới cơ sở dữ liệu
 - logic flow sẽ gồm 4 node theo thứ tự sau (thứ tự nối dây): 
-  1. http in  : dùng GET cho đơn giản, URL đặt tuỳ ý, ví dụ: /timkiem
-  2. function : để tiền xử lý dữ liệu gửi đến
-  3. MSSQL: để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
-  4. http response: để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
+  -  http in  : dùng GET cho đơn giản, URL đặt tuỳ ý, ví dụ: /timkiem
+  - function : để tiền xử lý dữ liệu gửi đến
+  - MSSQL: để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
+  - http response: để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
   có thể thêm node `debug` để quan sát giá trị trung gian.
 - test api thông qua trình duyệt, ví dụ: http://localhost:1880/timkiem?q=thị
 ### 2.6. Tạo giao diện front-end:
@@ -70,7 +74,7 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 - đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
 - đã hiểu cách sử dụng nodered để tạo api back-end như nào?
 - đã hiểu cách frond-end tương tác với back-end ra sao?
-----------------------------------------------------------------
+-----------------------------------
 # TIÊU CHÍ CHẤM ĐIỂM:
 1. y/c bắt buộc về thời gian: ko quá Deadline, quá: 0 điểm (ko có ngoại lệ)
 2. cài đặt được apache và nodejs và nodered: 1đ
@@ -79,7 +83,7 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 5. tạo được back-end api trên nodered, test qua url thành công: 1đ
 6. tạo được front-end html css js, gọi được api, hiển thị kq: 1đ
 7. trình bày độ hiểu về toàn bộ quá trình (mục 2.7): 5đ
-----------------------------------------------------------------
+-----------------------------------
 # GHI CHÚ:
 1. yêu cầu trên cài đặt trên ổ D, nếu máy ko có ổ D có thể linh hoạt chuyển sang ổ khác, path khác.
 2. có thể thực hiện trực tiếp trên máy tính windows, hoặc máy ảo
@@ -89,6 +93,23 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 6. bài tập thực làm sẽ tốn nhiều thời gian, sv cần chứng minh quá trình làm: save file `readme.md` mỗi khoảng 15-30 phút làm : lịch sử sửa đổi sẽ thấy quá trình làm này!
 7. nhắc nhẹ: github ko fake datetime được.
 8. sv được sử dụng AI để tham khảo.
-----------------------------------------------------------------
+-----------------------------------
 # BÀI LÀM: 
-## 2.1. CÀI ĐẶT APACHE WEB SERVER 
+## 2.1. Cài đặt Apache web server:
+### Bước 1: Vô hiệu hóa IIS đang chạy
+- Mục đích của vô hiệu hóa IIS là để tránh xung đột cổng 80 giữa IIS và Apache.
+- Nhấn **Start -> gõ *'cmd'* -> chọn *'Run as administrator'***
+- Trong cửa sổ CMD gõ lệnh ***iisreset /stop*** để dừng toàn bộ dịch vụ IIS đang chiếm cổng 80. Nếu có báo lỗi ***iisreset' is not recognized*** nghĩa là IIS chưa được cài, và có thể bỏ qua bước này.
+
+  <img width="1388" height="770" alt="Stopiis" src="https://github.com/user-attachments/assets/b0b80f9e-edc0-4acf-b21c-ffd9415a5bc1" />
+
+### Bước 2: Tải và cài Apache 
+- Truy cập vào trang chính thức **https://www.apachehaus.com/cgi-bin/download.plx** hoặc **https://www.apachelounge.com/download/** để download Apache về máy.
+- Sau khi down về (file thường có tên dạng `http-2.4.xx-win64-VS17.zip` thì giải nén vào thư mục ***D:\Apache24***
+
+### Bước 3: Cấu hình file httpd.conf
+
+
+
+
+
