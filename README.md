@@ -99,15 +99,41 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 ### Bước 1: Vô hiệu hóa IIS đang chạy
 - Mục đích của vô hiệu hóa IIS là để tránh xung đột cổng 80 giữa IIS và Apache.
 - Nhấn **Start -> gõ *'cmd'* -> chọn *'Run as administrator'***
-- Trong cửa sổ CMD gõ lệnh ***iisreset /stop*** để dừng toàn bộ dịch vụ IIS đang chiếm cổng 80. Nếu có báo lỗi ***iisreset' is not recognized*** nghĩa là IIS chưa được cài, và có thể bỏ qua bước này.
-
-  <img width="1388" height="770" alt="Stopiis" src="https://github.com/user-attachments/assets/b0b80f9e-edc0-4acf-b21c-ffd9415a5bc1" />
 
 ### Bước 2: Tải và cài Apache 
 - Truy cập vào trang chính thức **https://www.apachehaus.com/cgi-bin/download.plx** hoặc **https://www.apachelounge.com/download/** để download Apache về máy.
-- Sau khi down về (file thường có tên dạng `http-2.4.xx-win64-VS17.zip` thì giải nén vào thư mục ***D:\Apache24***
+- Sau khi down về, giải nén vào thư mục ***D:\Apache\\Apache24***
 
-### Bước 3: Cấu hình file httpd.conf
+### Bước 3: Cấu hình Apache 
+Để tạo website có domain: tranthithuha.com ta phải tạo domain cục bộ, thực hiện như sau: 
+#### Cấu hình file httpd.conf
+Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện: 
+  1. Sửa đường dẫn gốc 
+     ```
+     DocumentRoot "D:/Apache24/tranthithuha"
+     <Directory "D:/Apache24/tranthithuha">
+         Options Indexes FollowSymLinks
+         AllowOverride All
+         Require all granted
+     </Directory>
+     ```
+   2. Kích hoạt file Virtual Hosts: Tìm dòng *#Include conf/extra/httpd-vhosts.conf* và bỏ dấu # ở đầu dòng.
+
+#### Cấu hình file Virtual Hosts (httpd-vhosts.conf)
+  1. Mở file `D:\Apache\Apache24\conf\extra\httpd-vhosts.conf`
+  2. Đổi tên server:
+     ```
+     <VirtualHost *:80>
+         ServerAdmin admin@tranthithuha.com
+         DocumentRoot "D:\Apache\Apache24\tranthithuha"
+         ServerName tranthithuha.com
+         ErrorLog "logs/tranthithuha-error.log"
+         CustomLog "logs/tranthithuha-access.log" common
+     </VirtualHost>
+    ```
+#### Tạo thư mục chứa website tại D:\Apache\Apache24\tranthithuha
+- Tạo một file index trong thư mục này.
+
 
 
 
