@@ -130,7 +130,8 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
          ErrorLog "logs/tranthithuha-error.log"
          CustomLog "logs/tranthithuha-access.log" common
      </VirtualHost>
-    ```
+     ```
+    
 #### Tạo thư mục chứa website tại D:\Apache\Apache24\tranthithuha
 - Tạo một file index trong thư mục này.
 
