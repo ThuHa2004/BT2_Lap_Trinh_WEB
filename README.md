@@ -143,10 +143,22 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   - Lệnh cài đặt: **D:\Apache\Apache24\bin\httpd.exe -k install**
   - Lệnh khởi động: **D:\Apache\Apache24\bin\httpd.exe -k start**
   <img width="1729" height="150" alt="image" src="https://github.com/user-attachments/assets/bf631793-af7f-4f4b-815b-e40bb908cd1c" />
-  
 
+- Kết quả sau khi cài đặt và chạy: 
+  <img width="1919" height="389" alt="image" src="https://github.com/user-attachments/assets/bd3f883d-4b4a-4b40-915e-659b1d019b56" />
 
+## 2.2. Cài đặt nodejs và nodered => Dùng làm backend
+### Cài đặt nodejs
+- Truy cập vào **https://nodejs.org/dist/v20.19.5/node-v20.19.5-x64.msi** để download nodejs về máy.
+- Sau khi download về máy, cài đặt nodejs vào thư mục **D:/nodejs**
 
+### Cài đặt Node-RED
+#### Bước 1: Mở CMD quyền Administrator
+- Trỏ vào thư mục *D:/nodejs*
+- Chạy lệnh: `npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered"` để cài đặt Node-RED.
+
+#### Bước 2: Cài đặt NSSM 
+- Truy cập vào: **https://nssm.cc/release/nssm-2.24.zip** để download file. Sau đó giải nén và được file **nssm.exe**
 
 
 
