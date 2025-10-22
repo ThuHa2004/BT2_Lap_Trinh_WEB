@@ -135,6 +135,16 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 #### Tạo thư mục chứa website tại D:\Apache\Apache24\tranthithuha
 - Tạo một file index trong thư mục này.
 
+### Bước 4: Fake IP trong file hosts
+- Mở file `C:\Windows\System32\drivers\etc\hosts` bằng notepad và thêm dòng *127.0.0.1   tranthithuha.com*  sau đó lưu lại.
+
+### Bước 5: Cài đặt và khởi động lại Apache
+- Mở CMD quyền Administrator sau đó gõ lệnh cài đặt và khở động Apache:
+  - Lệnh cài đặt: **D:\Apache\Apache24\bin\httpd.exe -k install**
+  - Lệnh khởi động: **D:\Apache\Apache24\bin\httpd.exe -k start**
+  <img width="1729" height="150" alt="image" src="https://github.com/user-attachments/assets/bf631793-af7f-4f4b-815b-e40bb908cd1c" />
+  
+
 
 
 
