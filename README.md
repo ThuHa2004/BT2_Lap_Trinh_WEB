@@ -156,9 +156,27 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 #### Bước 1: Mở CMD quyền Administrator
 - Trỏ vào thư mục *D:/nodejs*
 - Chạy lệnh: `npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered"` để cài đặt Node-RED.
+  <img width="1178" height="317" alt="image" src="https://github.com/user-attachments/assets/590f05e2-be32-4886-a5eb-d4148343c446" />
+
 
 #### Bước 2: Cài đặt NSSM 
-- Truy cập vào: **https://nssm.cc/release/nssm-2.24.zip** để download file. Sau đó giải nén và được file **nssm.exe**
+- Truy cập vào: `https://nssm.cc/release/nssm-2.24.zip` để download file. Sau đó giải nén và được file **nssm.exe**
+- Copy file **nssm.exe** vào thư mục **D:\nodejs\nodered\***
+- Tạo file *D:\nodejs\nodered\run-nodered.cmd* với 5 dòng sau để khởi động nodered:
+  ```
+  @echo off
+  REM fix path
+  set PATH=D:\nodejs;%PATH%
+  REM Run Node-RED
+  node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work" %*
+  ```
+  
 
+#### Bước 3: Cài đặt Node-RED thành Windows Service
+- Mở CMD, run as administrator sau đó trỏ đến thư mục: `D:\nodejs\nodered`
+- Chạy lệnh `nssm.exe install a1-nodered "D:\nodejs\nodered\run-nodered.cmd"` để chạy service `a1-nodered`
+- Chạy lệnh `nssm start a1-nodered`
+  <img width="565" height="98" alt="image" src="https://github.com/user-attachments/assets/3d0fdefc-7df3-4f82-aa84-f67c2befaeaa" />
+###### Sau khi cài đặt xong, Node-RED sẽ hoạt động ở `http://localhost:1880`
 
 
