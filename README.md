@@ -227,6 +227,8 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
   <img width="1914" height="810" alt="image" src="https://github.com/user-attachments/assets/613c2427-8db5-46fa-9609-5af3b682990d" />
 
+## 2.5. Tạo API back-end bằng nodered
+
 
   
 
