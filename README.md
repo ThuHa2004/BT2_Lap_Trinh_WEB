@@ -190,7 +190,20 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
 ## 2.3. Tạo CSDL tùy ý trên mssql (SQL Server 2022)
 ## 2.4. Cài đặt thư viện trên Node-RED
+#### Bước 1: Mở Node-RED trên trình duyệt web, chọn *Manage palette* và mở tap *Install*
+- Cài các thư viện sau:
+  - `node-red-contrib-mssql-plus` : Kết nối đến SQL Server
+  - `node-red-node-mysql` : Kết nối MySQL
+  - `node-red-contrib-telegrambot` : Gửi nhận các tin nhắn qua Telegram
+  - ` node-red-contrib-moment` : Xử lý thời gian dễ dàng
+  - `node-red-contrib-influxdb` : Lưu dữ liệu vào InfluxDB
+  - `node-red-contrib-duckdns` : Cập nhật IP động (DuckDNS)
+  - `node-red-contrib-cron-plus` : Đặt lịch chạy tự động, cron job
 
+#### Bước 2: Thêm đăng nhập Admin 
+- Mở file cấu hình settings.js : `D:\nodejs\nodered\work\settings.js`
+- Tìm đến đoạn code sau và sửa:
+  
   
 
 
