@@ -189,6 +189,20 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   <img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/eafebf4c-09d7-4700-850f-50eba6ec18c4" />
 
 ## 2.3. Tạo CSDL tùy ý trên mssql (SQL Server 2022)
+- Thiết kế CSDL chứa các thông tin về sản phẩm quần áo thu đông trên hệ thống.
+#### Server_name: LAPTOP-B1UCCBCI\SQL_TTTHA
+#### DB_name: QLShop_QuanAo
+#### Table_name: SPQuanAo
+#### Port 1433
+- Tạo bảng dữ liệu:
+
+  <img width="1013" height="280" alt="image" src="https://github.com/user-attachments/assets/38e80cc5-2048-4358-a4d2-9975d4ee3e37" />
+
+- Nhập dữ liệu demo:
+  
+
+
+
 ## 2.4. Cài đặt thư viện trên Node-RED
 #### Bước 1: Mở Node-RED trên trình duyệt web bằng url `http://localhost:1880`, chọn *Manage palette* và mở tap *Install*
 - Cài các thư viện sau:
