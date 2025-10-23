@@ -190,7 +190,7 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
 ## 2.3. Tạo CSDL tùy ý trên mssql (SQL Server 2022)
 ## 2.4. Cài đặt thư viện trên Node-RED
-#### Bước 1: Mở Node-RED trên trình duyệt web, chọn *Manage palette* và mở tap *Install*
+#### Bước 1: Mở Node-RED trên trình duyệt web bằng url `http://localhost:1880`, chọn *Manage palette* và mở tap *Install*
 - Cài các thư viện sau:
   - `node-red-contrib-mssql-plus` : Kết nối đến SQL Server
   - `node-red-node-mysql` : Kết nối MySQL
@@ -200,9 +200,36 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   - `node-red-contrib-duckdns` : Cập nhật IP động (DuckDNS)
   - `node-red-contrib-cron-plus` : Đặt lịch chạy tự động, cron job
 
-#### Bước 2: Thêm đăng nhập Admin 
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6e39cf08-a3bb-450d-bd6b-a20e27363d11" />
+
+#### Bước 2: Thêm đăng nhập Admin (sửa file `D:\nodejs\nodered\work\settings.js`)
 - Mở file cấu hình settings.js : `D:\nodejs\nodered\work\settings.js`
-- Tìm đến đoạn code sau và sửa:
+- Tìm đến chỗ adminAuth, bỏ // ở đầu dòng (8 dòng) và thay chuỗi mã hóa mật khẩu bằng chuỗi mới.
+
+  <img width="1007" height="305" alt="image" src="https://github.com/user-attachments/assets/ce231173-69da-47c7-b06e-c61d4a5a8e97" />
+
+  ```
+  adminAuth: {
+        type: "credentials",
+        users: [{
+            username: "admin",
+            password: "chuoi_ma_hoa_mat_khau",
+            permissions: "*"
+        }]
+    },
+  ```
+- Mã hóa mật khẩu có thể thiết lập băng tool: `https://tms.tnut.edu.vn/pw.php`
+- Chạy lại nodered bằng cách mở CMD, vào thư mục `D:\nodejs\nodered` và chạy lệnh `nssm restart a1-nodered`
+  
+  <img width="871" height="312" alt="image" src="https://github.com/user-attachments/assets/aaf93ae7-604a-461f-ab9a-4a15c7c3c96c" />
+
+- Khi đó nodered sẽ yêu cầu nhập mật khẩu mới vào được giao diện cho admin tại `http://localhost:1880`
+
+  <img width="1914" height="810" alt="image" src="https://github.com/user-attachments/assets/613c2427-8db5-46fa-9609-5af3b682990d" />
+
+
+  
+
   
   
 
