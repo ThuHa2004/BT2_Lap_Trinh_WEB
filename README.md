@@ -247,17 +247,32 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 - Logic flow sẽ gồm 4 bước theo thứ tự sau  (thứ tự nối dây):
   1. http in : dùng GET cho đơn giản, URL đặt tùy ý, ví dụ: /timkiem
      
-     <img width="641" height="333" alt="image" src="https://github.com/user-attachments/assets/2aa24ac3-a895-4a2e-bebb-6b3e9085efd0" />
+  <img width="641" height="333" alt="image" src="https://github.com/user-attachments/assets/2aa24ac3-a895-4a2e-bebb-6b3e9085efd0" />
 
   2. function : để tiền xử lý dữ liệu gửi đến
 
-     <img width="813" height="652" alt="image" src="https://github.com/user-attachments/assets/0a1eb19b-c5ef-4e9a-9781-6bb8c7ebc2fd" />
+  <img width="813" height="652" alt="image" src="https://github.com/user-attachments/assets/0a1eb19b-c5ef-4e9a-9781-6bb8c7ebc2fd" />
 
   3. MSSQL : để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
+
+  <img width="649" height="612" alt="image" src="https://github.com/user-attachments/assets/d6681312-0e41-480d-a661-33e77ef48e8f" />
+
+  <img width="636" height="804" alt="image" src="https://github.com/user-attachments/assets/d5c15977-e6bc-4a9d-becc-2e4221988991" />
      
-  4. http response : để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
-     
-  5.  debug : 
+  5. http response : để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
+
+  <img width="641" height="508" alt="image" src="https://github.com/user-attachments/assets/de2c8a73-c454-497a-9360-c86e1f0f9ac4" />
+
+  6.  debug : Thêm debug để quan sát giá trị trung gian
+
+  <img width="643" height="588" alt="image" src="https://github.com/user-attachments/assets/715d264c-40ca-46b1-a34f-37e74f4529d4" />
+
+- Kết quả:
+  
+  img width="1393" height="204" alt="image" src="https://github.com/user-attachments/assets/2e64a109-5e2a-482b-8a8f-ceccccc4b1b7" />
+
+
+
 
   
 
