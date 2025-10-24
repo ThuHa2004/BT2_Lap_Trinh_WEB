@@ -269,7 +269,7 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
 - Kết quả:
   
-  img width="1393" height="204" alt="image" src="https://github.com/user-attachments/assets/2e64a109-5e2a-482b-8a8f-ceccccc4b1b7" />
+  <img width="1393" height="204" alt="image" src="https://github.com/user-attachments/assets/2e64a109-5e2a-482b-8a8f-ceccccc4b1b7" />
 
 
 
