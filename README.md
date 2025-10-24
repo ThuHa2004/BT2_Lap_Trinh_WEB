@@ -245,32 +245,45 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 - Tại flow1 trên nodered, sử dụng `http in` và `http response` để tạo api
 - Thêm node `MSSQL` để truy vắn tới cơ sở dữ liệu
 - Logic flow sẽ gồm 4 bước theo thứ tự sau  (thứ tự nối dây):
-  1. http in : dùng GET cho đơn giản, URL đặt tùy ý, ví dụ: /timkiem
-     
-  <img width="641" height="333" alt="image" src="https://github.com/user-attachments/assets/2aa24ac3-a895-4a2e-bebb-6b3e9085efd0" />
-
-  2. function : để tiền xử lý dữ liệu gửi đến
-
-  <img width="813" height="652" alt="image" src="https://github.com/user-attachments/assets/0a1eb19b-c5ef-4e9a-9781-6bb8c7ebc2fd" />
-
-  3. MSSQL : để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
-
-  <img width="649" height="612" alt="image" src="https://github.com/user-attachments/assets/d6681312-0e41-480d-a661-33e77ef48e8f" />
-
-  <img width="636" height="804" alt="image" src="https://github.com/user-attachments/assets/d5c15977-e6bc-4a9d-becc-2e4221988991" />
-     
-  5. http response : để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
-
-  <img width="641" height="508" alt="image" src="https://github.com/user-attachments/assets/de2c8a73-c454-497a-9360-c86e1f0f9ac4" />
-
-  6.  debug : Thêm debug để quan sát giá trị trung gian
-
-  <img width="643" height="588" alt="image" src="https://github.com/user-attachments/assets/715d264c-40ca-46b1-a34f-37e74f4529d4" />
-
-- Kết quả:
   
-  <img width="1393" height="204" alt="image" src="https://github.com/user-attachments/assets/2e64a109-5e2a-482b-8a8f-ceccccc4b1b7" />
+  **1. http in : dùng GET cho đơn giản, URL đặt tùy ý, ví dụ: /timkiem**
+     
+  <img width="655" height="437" alt="image" src="https://github.com/user-attachments/assets/4d660c89-7e2d-432c-89ca-b4f3e3d41ee2" />
 
+  **2. function : để tiền xử lý dữ liệu gửi đến**
+
+  <img width="820" height="537" alt="image" src="https://github.com/user-attachments/assets/80af0766-59bf-4804-a2e7-7bbba473ef84" />
+
+  **3. MSSQL : để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý**
+
+  <img width="655" height="619" alt="image" src="https://github.com/user-attachments/assets/7e96f8eb-500c-45ba-8dc6-6dea1652f344" />
+
+  <img width="647" height="516" alt="image" src="https://github.com/user-attachments/assets/e691db88-5046-40d8-a42d-6c9f9a3b33ff" />
+
+  **4. http response : để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json**
+
+  <img width="646" height="531" alt="image" src="https://github.com/user-attachments/assets/df75de1d-ed11-4b49-928d-990678138390" />
+
+  **5.  debug : Thêm debug để quan sát giá trị trung gian**
+
+  <img width="650" height="488" alt="image" src="https://github.com/user-attachments/assets/df5fcccf-def1-4142-83a4-b5bc877342b0" />
+
+- **Kết quả:**
+  
+  <img width="1384" height="205" alt="image" src="https://github.com/user-attachments/assets/2225376a-01e2-42df-9e26-bb7f798b8c9c" />
+
+### Kiểm tra API tìm kiếm sản phẩm thông qua trình duyệt
+- Ví dụ: **http://localhost:1880/timkiem?q=Áo**. Có 8 sản phẩm áo đã được tìm thấy khi tìm kiếm 'Áo' và dữ liệu được trả về dưới dạng json:
+
+  <img width="1919" height="1006" alt="image" src="https://github.com/user-attachments/assets/00604bda-c868-40c6-b498-8ea8d36326bd" />
+
+- Ví dụ: **http://localhost:1880/timkiem?q=Quần`**. Có 2 sản phẩm đã được tìm thấy khi tìm kiếm 'Quần':
+  
+  <img width="1914" height="548" alt="image" src="https://github.com/user-attachments/assets/caaf0c12-2361-4f61-9f9b-e3ffcf947d1b" />
+
+## 2.6. Tạo giao diện Front-end 
+
+## 2.7. Tự đánh giá bài làm 
 
 
 
