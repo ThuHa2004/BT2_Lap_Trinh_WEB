@@ -196,12 +196,11 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 #### Port 1433
 - Tạo bảng dữ liệu:
 
-  <img width="1013" height="280" alt="image" src="https://github.com/user-attachments/assets/38e80cc5-2048-4358-a4d2-9975d4ee3e37" />
+  <img width="722" height="270" alt="image" src="https://github.com/user-attachments/assets/00219e6c-88c5-4c8e-9f06-b774fe35fe54" />
 
 - Nhập dữ liệu demo:
-  
 
-
+  <img width="1585" height="313" alt="image" src="https://github.com/user-attachments/assets/f8e0dbd1-28a3-4ecf-b90a-6e5b28b0e98a" />
 
 ## 2.4. Cài đặt thư viện trên Node-RED
 #### Bước 1: Mở Node-RED trên trình duyệt web bằng url `http://localhost:1880`, chọn *Manage palette* và mở tap *Install*
@@ -242,7 +241,23 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   <img width="1914" height="810" alt="image" src="https://github.com/user-attachments/assets/613c2427-8db5-46fa-9609-5af3b682990d" />
 
 ## 2.5. Tạo API back-end bằng nodered
+### Mục tiêu của bước này là tạo API backend trên nodered để tìm kiếm sản phẩm trong SQL Server qua URL.
+- Tại flow1 trên nodered, sử dụng `http in` và `http response` để tạo api
+- Thêm node `MSSQL` để truy vắn tới cơ sở dữ liệu
+- Logic flow sẽ gồm 4 bước theo thứ tự sau  (thứ tự nối dây):
+  1. http in : dùng GET cho đơn giản, URL đặt tùy ý, ví dụ: /timkiem
+     
+     <img width="641" height="333" alt="image" src="https://github.com/user-attachments/assets/2aa24ac3-a895-4a2e-bebb-6b3e9085efd0" />
 
+  2. function : để tiền xử lý dữ liệu gửi đến
+
+     <img width="813" height="652" alt="image" src="https://github.com/user-attachments/assets/0a1eb19b-c5ef-4e9a-9781-6bb8c7ebc2fd" />
+
+  3. MSSQL : để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
+     
+  4. http response : để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
+     
+  5.  debug : 
 
   
 
