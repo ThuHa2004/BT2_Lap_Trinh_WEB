@@ -282,6 +282,19 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   <img width="1914" height="548" alt="image" src="https://github.com/user-attachments/assets/caaf0c12-2361-4f61-9f9b-e3ffcf947d1b" />
 
 ## 2.6. Tạo giao diện Front-end 
+- HTML gồm các file: `index.html`, `tranthithuha.js` và `tranthithuha.css`. Tất cả các file này đặt trong thư mục `D:\Apache\Apache24\tranthithuha`
+
+  <img width="1340" height="352" alt="image" src="https://github.com/user-attachments/assets/9572d89c-2ebf-41ce-a87f-e3bdd2896a09" />
+
+  <img width="1558" height="562" alt="image" src="https://github.com/user-attachments/assets/1e875301-baa0-4d51-95f4-c0d00c291e04" />
+
+- Giao diện chạy demo:
+
+  <img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/559328eb-8d57-4b6f-9ad0-1a5f077ab560" />
+
+- Giao diện tìm kiếm sản phẩm:
+
+  <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/e9dd3061-4de5-47d5-a12d-0cc5a9a505d3" />
 
 ## 2.7. Tự đánh giá bài làm 
 
