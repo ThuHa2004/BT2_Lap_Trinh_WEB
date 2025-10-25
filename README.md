@@ -297,7 +297,9 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/a9f125a3-6e80-46a4-9746-861961a626e6" />
 
 ## 2.7. Tự đánh giá bài làm 
-
+- đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
+- đã hiểu cách sử dụng nodered để tạo api back-end như nào?
+- đã hiểu cách frond-end tương tác với back-end ra sao?
 
 
   
