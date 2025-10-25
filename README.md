@@ -200,7 +200,7 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
 - Nhập dữ liệu demo:
 
-  <img width="1585" height="313" alt="image" src="https://github.com/user-attachments/assets/f8e0dbd1-28a3-4ecf-b90a-6e5b28b0e98a" />
+  <img width="1187" height="378" alt="image" src="https://github.com/user-attachments/assets/cad42f8d-73a2-42e1-8cfc-f04364b2d1f3" />
 
 ## 2.4. Cài đặt thư viện trên Node-RED
 #### Bước 1: Mở Node-RED trên trình duyệt web bằng url `http://localhost:1880`, chọn *Manage palette* và mở tap *Install*
@@ -294,7 +294,7 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
 
 - Giao diện tìm kiếm sản phẩm:
 
-  <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/e9dd3061-4de5-47d5-a12d-0cc5a9a505d3" />
+  <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/a9f125a3-6e80-46a4-9746-861961a626e6" />
 
 ## 2.7. Tự đánh giá bài làm 
 
