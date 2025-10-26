@@ -99,6 +99,7 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u "D:\nodejs\nodered\work
 ### Bước 1: Vô hiệu hóa IIS đang chạy
 - Mục đích của vô hiệu hóa IIS là để tránh xung đột cổng 80 giữa IIS và Apache.
 - Nhấn **Start -> gõ *'cmd'* -> chọn *'Run as administrator'***
+- Gõ lệnh `iisreset /stop` để vô hiệu hóa IIS
 
 ### Bước 2: Tải và cài Apache 
 - Truy cập vào trang chính thức **https://www.apachehaus.com/cgi-bin/download.plx** hoặc **https://www.apachelounge.com/download/** để download Apache về máy.
