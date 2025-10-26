@@ -161,6 +161,8 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   
   <img width="1178" height="317" alt="image" src="https://github.com/user-attachments/assets/590f05e2-be32-4886-a5eb-d4148343c446" />
 
+  
+
 
 #### Bước 2: Cài đặt NSSM 
 - Truy cập vào: `https://nssm.cc/release/nssm-2.24.zip` để download file. Sau đó giải nén và được file **nssm.exe**
@@ -297,10 +299,20 @@ Mở file `D:\Apache\Apache24\conf\httpd.conf` sau đó thực hiện:
   <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/a9f125a3-6e80-46a4-9746-861961a626e6" />
 
 ## 2.7. Tự đánh giá bài làm 
-- đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
-- đã hiểu cách sử dụng nodered để tạo api back-end như nào?
-- đã hiểu cách frond-end tương tác với back-end ra sao?
+### Về quá trình cài đặt phần mềm và các thư viện: 
+- Em đã năm được quá trình cài đặt và cấu hình Apache, nodejs, node-red. Nắm được quy trình cài đặt rõ ràng, cài `node.js` (đúng phiên bản và đặt trong ổ D tại thư mục `D:\nodejs), cài `Node-RED` bằng `nmp --prefix` sau đó tạo script khởi chạy `run-nodered.cmd` và dùng nssm để đăng ký Node-RED.
+- Biết cài đặt và khởi động lại web server Apache.
+- Thông qua quá trình cài đặt này đã em đã hiểu được cách để các thành phần này phối hợp với nhau để tạo thành hệ thống back-end.
 
+### Cách sử dụng Nored-RED để tạo API back-end
+- Em hiểu được cách tạo API trong Node-RED bằng các node `http in`, `http response`, `function`, `mssql`,... 
+- Hiểu rõ mẫu thiết kế flow cho API: dùng `http in` để nhận request -> function để tiền xử lý (lấy query string, tạo SQL) -> node MSSQL để truy vấn đến DB -> `http response` để trả về kết quả json.
+- Nắm được cách bật debug để kiểm tra msg từng bước, đảm bảo return msg. 
+-> Em đã hiểu được luồng xử lý và phản hồi kết quả trong một API back-end.
+
+### Cách front-end tương tác với backend
+- Em đã nắm được luồng tương tác giữa giao diện html + JS gửi HTTP request (POST, GET,...) đến endpoint Node-RED, Node-RED truy vấn đến DB rồi trả về kết quả JSON để frontend nhận JSON rồi hiển thị hoặc xử lý.
+- Qua đây, em cũng đã nắm đượ sự liên kết giữa front-end và máy chủ xử lý và tầm quan trọng của việc thiết kế một API rõ ràng và đúng chuẩn.
 
   
 
